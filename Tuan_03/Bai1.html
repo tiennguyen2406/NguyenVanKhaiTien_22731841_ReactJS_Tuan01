@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  
+  padding: 5px;
+}
+.container > div {
+  
+  padding: 10px;
+}
+.container > div.header {
+    display: flex;
+  grid-area: header;
+  text-align: center;
+  justify-content: space-between;
+}
+.container > div.menu {
+  grid-area: menu;
+}
+.container > div.content {
+  grid-area: content;
+}
+.container > div.footer {
+  grid-area: footer;
+}
+.menu1{
+
+  display: grid;
+  place-items: center;
+}
+.menu2 {
+  justify-content: space-between;
+}
+.menu3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.menu3 img {
+    width: 30px; /* Điều chỉnh kích thước ảnh */
+    height: auto;
+}
+.Rating ul li{
+    align-items: center;
+    display: flex;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="menu1" style="display: flex;margin-left: 30px;">
+        <img src="../Tuan_03/hinh anh/chefify.png" alt="">
+        <div><input type="search" placeholder="cakescascsa" style="border: 10;margin-left: 20px;height: 25px;width: 250px; "></div>
+        
+    </div>
+    <div class="menu2">
+        <ul style="list-style-type: none;display: flex;justify-content: space-between;">
+            <li style="margin-right: 20px"><a style="text-decoration: none;color: black;" href="">What to cook</a></li>
+            <li style="margin-right: 20px"><a style="text-decoration: none;color: black;"href="">Recipes</a></li>
+            <li style="margin-right: 20px"><a style="text-decoration: none;color: black;" href="">Ingredients</a></li>
+            <li style="margin-right: 20px"><a style="text-decoration: none;color: black;" href="">Occasions</a></li>
+            <li style="margin-right: 20px"><a style="text-decoration: none;color: black;" href="">About Us</a></li>
+        </ul>
+    </div>
+    <div class="menu3">
+        <img src="../Tuan_03/hinh anh/check.png" alt="">
+        <p style="color: deeppink;">Your RecipeBox</p>
+        <img src="../Tuan_03/hinh anh/avatar.png" alt="">
+    </div>
+
+  </div>
+
+
+  <div style="padding-left: 80px;margin-top: 50px;" class="menu">
+    <div style="display: flex;align-items: center;">
+        <img style="width: 30px;height: 30px;" src="../Tuan_03/hinh anh/list_filter.png" alt="">
+        <h4>Filter</h4>
+    </div>
+    <div>
+        <h4>Type</h4>
+        <div style="display: flex;">
+            <ul style="list-style-type: none;padding: 0;">
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Pan-fried</li>
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Grilled</li>
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Sauteed</li>
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Steamed</li>
+            </ul>
+            <ul style="list-style-type: none;">
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Stir-fried</li>
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Roasted</li>
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Baked</li>
+                <li style="margin-bottom: 15px;"><input type="checkbox" name="" id="">Stewed</li>
+            
+        </div>
+        <div>
+            <h4>Time</h4>
+            <img src="../Tuan_03/hinh anh/slider.png" alt="">
+        </div>
+        <div class="Rating">
+            <h4>Rating</h4>
+            <ul style="list-style-type: none;padding: 0;">
+                <li style="margin-bottom: 10px;"><input type="checkbox" name="" id=""><img src="../Tuan_03/hinh anh/rating_5.png" alt=""></li>
+                <li style="margin-bottom: 10px;"><input type="checkbox" name="" id=""><img src="../Tuan_03/hinh anh/rating_4.png" alt=""></li>
+                <li style="margin-bottom: 10px;"><input type="checkbox" name="" id=""><img src="../Tuan_03/hinh anh/rating_3.png" alt=""></li>
+                <li style="margin-bottom: 10px;"><input type="checkbox" name="" id=""><img src="../Tuan_03/hinh anh/rating_2.png" alt=""></li>
+                <li style="margin-bottom: 10px;"><input type="checkbox" name="" id=""><img src="../Tuan_03/hinh anh/rating_1.png" alt=""></li>
+            </ul>
+
+        </div>
+        <button style="border-radius: 5px;width: 100%;height: 40px;margin-top: 50px;background-color: deeppink;color: white;border: 0;">Apply</button>
+    </div>
+  </div>
+  <div class="content" style="margin-top: 50px;margin-left:100px;align-items: center;display: flex;flex-direction: column;">
+    <h2>Sorry, no results were found for "cakescascsa"</h2>
+    <img src="../Tuan_03/hinh anh/nothing.png" alt="">
+    <p>
+        We have all your Independence Day sweets covered
+    </p>
+    <ul style="list-style-type: none; display: flex;">
+        <li style="margin-right: 20px;"><a style="text-decoration: none;" href="">Sweet Cake</a></li>
+        <li style="margin-right: 20px;"><a style="text-decoration: none;" href="">Black Cake</a></li>
+        <li style="margin-right: 20px;"><a style="text-decoration: none;" href="">Pozole Verde</a></li>
+        <li style="margin-right: 20px;"><a style="text-decoration: none;" href="">Healthy food</a></li>
+    </ul>
+</div>
+  <div style="background-color: rgba(0, 0, 0, 0.893);color: white;display: flex;justify-content: space-between;border-radius: 5px;margin-top: 140px;" class="footer">
+    <div style="margin-left: 20px;">
+        <p style="font-weight: bold;">
+            About Us
+        </p>
+        <p>
+            Welcome to our website, a wonderful place to explore and learn how to cook like a pro.
+        </p>
+        <div>
+            <input style="height: 25px;width: 350px;border-radius: 5px;" type="text">
+            <button style="border-radius: 5px;border: 0;color: white;background-color: deeppink;height: 30px;width: 50px;margin-left: 10px;">send</button>
+        </div>
+        <div style="display: flex;justify-content: space-between;margin-top: 50px;">
+            <img  src="../Tuan_03/hinh anh/image.png" alt="">
+            <p>
+                2023 Chefify Company
+            </p>
+            <p>
+                Terms of Servicel Privacy Policy
+            </p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p style="font-weight: bold;" >Learn more</p>
+            <ul style="list-style-type: none;padding: 0;">
+                <li style="margin-top: 8px;"><a style="color: white;text-decoration: none;" href="">Our Cooks</a></li>
+                <li style="margin-top: 8px;"><a style="color: white;text-decoration: none;" href="">See Our Features</a></li>
+                <li style="margin-top: 8px;"><a style="color: white;text-decoration: none;" href="">FAQ</a></li>
+            </ul>
+        </div>
+        <div>
+            <p style="font-weight: bold;margin-top: 40px;">
+                Shop
+            </p>
+            <ul style="list-style-type: none;padding: 0;">
+                <li style="margin-top: 8px;"><a style="color: white;text-decoration: none;" href="">Gift Subscription</a></li>
+                <li style="margin-top: 8px;"><a style="color: white;text-decoration: none;" href="">Send Us Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-right: 50px;">
+        <p style="font-weight: bold;">
+            Recipes
+        </p>
+        <ul style="list-style-type: none;padding: 0;">
+            <li style="margin-top: 11px;"><a style="color: white;text-decoration: none;" href="">What to cook this week</a></li>
+            <li style="margin-top: 11px;"><a style="color: white;text-decoration: none;" href="">Pasta</a></li>
+            <li style="margin-top: 11px;"><a style="color: white;text-decoration: none;" href="">Dinner</a></li>
+            <li style="margin-top: 11px;"><a style="color: white;text-decoration: none;" href="">Healthy</a></li>
+            <li style="margin-top: 11px;"><a style="color: white;text-decoration: none;" href="">Vegetarian</a></li>
+            <li style="margin-top: 11px;"><a style="color: white;text-decoration: none;" href="">Vegan</a></li>
+            <li style="margin-top: 11px;"><a style="color: white;text-decoration: none;" href="">Christmas</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
