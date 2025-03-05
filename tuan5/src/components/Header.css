@@ -1,0 +1,57 @@
+/* Header.css */
+
+.header {
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #ffffff; /* White background */
+    border-bottom: 2px solid #e0e0e0; /* Bottom border */
+}
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #ff4081; /* Pink color */
+  }
+  
+  .logo-icon {
+    margin-right: 10px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile span {
+    margin-right: 10px;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular profile picture */
+  }
