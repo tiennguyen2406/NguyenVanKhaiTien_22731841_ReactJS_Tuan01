@@ -1,35 +1,39 @@
-.container {
+@import "tailwindcss";
+.container1 {
   display: grid;
   grid-template-areas:
     "menu header"
     "menu content"
-    "footer footer";
+    "menu footer";
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 5fr 1fr;
   width: 100vw;
   height: 100vh;
 }
-.container > div {
+.container1 > div {
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
 }
-.container > div.header {
+.container1 > div.header {
   grid-area: header;
   text-align: center;
-  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  flex-direction: row;
 }
-.container > div.menu {
+.container1 > div.menu {
   grid-area: menu;
-
 }
-.container > div.content {
+.container1 > div.content {
   grid-area: content;
 }
-.container > div.footer {
-  width: 100%;
+.container1 > div.footer {
   grid-area: footer;
+}
+.headerp1{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
 }
