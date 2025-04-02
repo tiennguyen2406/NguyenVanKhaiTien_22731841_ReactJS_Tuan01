@@ -52,7 +52,7 @@ function Menu(){
             <div class="mt-auto p-4 bg-blue-50 rounded-lg">
                 <p class="text-sm font-medium text-blue-800">V2.0 is available</p>
                 <button class="mt-2 w-full py-2 px-4 bg-white border-blue-700 border-2 text-blue-700 rounded-md hover:bg-blue-700 hover:text-white transition duration-300">
-                    Try now
+                    Try now!
                 </button>
             </div>
         </div>
