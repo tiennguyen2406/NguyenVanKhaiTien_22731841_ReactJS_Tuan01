@@ -16,13 +16,13 @@ function App() {
     <>
       <div className="container1">
         <div className="header">
-          {/* <Header></Header> */}
+          <Header></Header>
         </div>
         <div className="menu">
-          {/* <Menu></Menu> */}
+          <Menu></Menu>
         </div>
         <div className="navbar">
-          {/* <Overview></Overview> */}
+          <Overview></Overview>
         </div>
         <div className="content">
           {/* <Routes>

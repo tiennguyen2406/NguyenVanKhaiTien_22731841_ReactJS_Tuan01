@@ -1,0 +1,610 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "img": "../img/Avatar (1).png",
+      "name": "John",
+      "gender": "Male",
+      "Company": "AB",
+      "order_value": 1000,
+      "status": "new",
+      "date": "2024-04-01"
+    },
+    {
+      "id": "2",
+      "img": "../img/Avatar (2).png",
+      "name": "Alice",
+      "gender": "Female",
+      "Company": "XYZ",
+      "order_value": 1500,
+      "status": "in-progress",
+      "date": "2024-04-03"
+    },
+    {
+      "id": "3",
+      "img": "../img/Avatar (3).png",
+      "name": "Bob",
+      "gender": "Male",
+      "Company": "123 Corp",
+      "order_value": 800,
+      "status": "completed",
+      "date": "2024-03-27"
+    },
+    {
+      "id": "4",
+      "img": "../img/Avatar (4).png",
+      "name": "Emma",
+      "gender": "Female",
+      "Company": "TechWorld",
+      "order_value": 1200,
+      "status": "new",
+      "date": "2024-04-05"
+    },
+    {
+      "id": "5",
+      "img": "../img/Avatar (5).png",
+      "name": "David",
+      "gender": "Male",
+      "Company": "MicroSofty",
+      "order_value": 1100,
+      "status": "completed",
+      "date": "2024-03-29"
+    },
+    {
+      "id": "6",
+      "img": "../img/Avatar (1).png",
+      "name": "Sophia",
+      "gender": "Female",
+      "Company": "HelloTech",
+      "order_value": 1340,
+      "status": "in-progress",
+      "date": "2024-04-06"
+    },
+    {
+      "id": "7",
+      "img": "../img/Avatar (2).png",
+      "name": "Liam",
+      "gender": "Male",
+      "Company": "GreenSoft",
+      "order_value": 980,
+      "status": "new",
+      "date": "2024-04-07"
+    },
+    {
+      "id": "8",
+      "img": "../img/Avatar (3).png",
+      "name": "Olivia",
+      "gender": "Female",
+      "Company": "EcoCorp",
+      "order_value": 1460,
+      "status": "completed",
+      "date": "2024-03-30"
+    },
+    {
+      "id": "9",
+      "img": "../img/Avatar (4).png",
+      "name": "Noah",
+      "gender": "Male",
+      "Company": "BuildIt",
+      "order_value": 720,
+      "status": "in-progress",
+      "date": "2024-04-02"
+    },
+    {
+      "id": "10",
+      "img": "../img/Avatar (5).png",
+      "name": "Ava",
+      "gender": "Female",
+      "Company": "StyleHub",
+      "order_value": 1550,
+      "status": "new",
+      "date": "2024-04-03"
+    },
+    {
+      "id": "11",
+      "img": "../img/Avatar (1).png",
+      "name": "Ethan",
+      "gender": "Male",
+      "Company": "Designify",
+      "order_value": 1390,
+      "status": "completed",
+      "date": "2024-03-28"
+    },
+    {
+      "id": "12",
+      "img": "../img/Avatar (2).png",
+      "name": "Mia",
+      "gender": "Female",
+      "Company": "TechNova",
+      "order_value": 1170,
+      "status": "in-progress",
+      "date": "2024-04-06"
+    },
+    {
+      "id": "13",
+      "img": "../img/Avatar (3).png",
+      "name": "James",
+      "gender": "Male",
+      "Company": "SkyLabs",
+      "order_value": 1050,
+      "status": "new",
+      "date": "2024-04-07"
+    },
+    {
+      "id": "14",
+      "img": "../img/Avatar (4).png",
+      "name": "Isabella",
+      "gender": "Female",
+      "Company": "CodeWave",
+      "order_value": 1250,
+      "status": "completed",
+      "date": "2024-03-26"
+    },
+    {
+      "id": "15",
+      "img": "../img/Avatar (5).png",
+      "name": "Benjamin",
+      "gender": "Male",
+      "Company": "BlueWorks",
+      "order_value": 990,
+      "status": "new",
+      "date": "2024-04-01"
+    },
+    {
+      "id": "16",
+      "img": "../img/Avatar (1).png",
+      "name": "Charlotte",
+      "gender": "Female",
+      "Company": "LogicX",
+      "order_value": 940,
+      "status": "in-progress",
+      "date": "2024-04-05"
+    },
+    {
+      "id": "17",
+      "img": "../img/Avatar (2).png",
+      "name": "Lucas",
+      "gender": "Male",
+      "Company": "CoreBit",
+      "order_value": 870,
+      "status": "new",
+      "date": "2024-04-04"
+    },
+    {
+      "id": "18",
+      "img": "../img/Avatar (3).png",
+      "name": "Amelia",
+      "gender": "Female",
+      "Company": "PixelPro",
+      "order_value": 990,
+      "status": "completed",
+      "date": "2024-03-25"
+    },
+    {
+      "id": "19",
+      "img": "../img/Avatar (4).png",
+      "name": "Henry",
+      "gender": "Male",
+      "Company": "FastTech",
+      "order_value": 1130,
+      "status": "new",
+      "date": "2024-04-02"
+    },
+    {
+      "id": "20",
+      "img": "../img/Avatar (5).png",
+      "name": "Harper",
+      "gender": "Female",
+      "Company": "SnapEdge",
+      "order_value": 1070,
+      "status": "in-progress",
+      "date": "2024-04-03"
+    },
+    {
+      "id": "21",
+      "img": "../img/Avatar (1).png",
+      "name": "Alexander",
+      "gender": "Male",
+      "Company": "NextLeap",
+      "order_value": 920,
+      "status": "completed",
+      "date": "2024-03-30"
+    },
+    {
+      "id": "22",
+      "img": "../img/Avatar (2).png",
+      "name": "Evelyn",
+      "gender": "Female",
+      "Company": "GoSmart",
+      "order_value": 870,
+      "status": "new",
+      "date": "2024-04-01"
+    },
+    {
+      "id": "23",
+      "img": "../img/Avatar (3).png",
+      "name": "Daniel",
+      "gender": "Male",
+      "Company": "QuickApps",
+      "order_value": 760,
+      "status": "completed",
+      "date": "2024-03-29"
+    },
+    {
+      "id": "24",
+      "img": "../img/Avatar (4).png",
+      "name": "Abigail",
+      "gender": "Female",
+      "Company": "BrightNet",
+      "order_value": 880,
+      "status": "in-progress",
+      "date": "2024-04-05"
+    },
+    {
+      "id": "25",
+      "img": "../img/Avatar (5).png",
+      "name": "Matthew",
+      "gender": "Male",
+      "Company": "FastLabs",
+      "order_value": 1040,
+      "status": "new",
+      "date": "2024-04-06"
+    },
+    {
+      "id": "26",
+      "img": "../img/Avatar (1).png",
+      "name": "Emily",
+      "gender": "Female",
+      "Company": "TechBee",
+      "order_value": 1110,
+      "status": "completed",
+      "date": "2024-03-28"
+    },
+    {
+      "id": "27",
+      "img": "../img/Avatar (2).png",
+      "name": "Sebastian",
+      "gender": "Male",
+      "Company": "GreenCore",
+      "order_value": 1120,
+      "status": "in-progress",
+      "date": "2024-04-07"
+    },
+    {
+      "id": "28",
+      "img": "../img/Avatar (3).png",
+      "name": "Elizabeth",
+      "gender": "Female",
+      "Company": "EcoBase",
+      "order_value": 970,
+      "status": "new",
+      "date": "2024-04-06"
+    },
+    {
+      "id": "29",
+      "img": "../img/Avatar (4).png",
+      "name": "Jackson",
+      "gender": "Male",
+      "Company": "InnoSoft",
+      "order_value": 1080,
+      "status": "completed",
+      "date": "2024-03-27"
+    },
+    {
+      "id": "30",
+      "img": "../img/Avatar (5).png",
+      "name": "Avery",
+      "gender": "Female",
+      "Company": "OpenFlow",
+      "order_value": 1230,
+      "status": "in-progress",
+      "date": "2024-04-04"
+    },
+    {
+      "id": "1744126513584",
+      "name": "John",
+      "gender": "",
+      "Company": "IUH",
+      "order_value": 12000,
+      "status": "active",
+      "date": "2025-02-22",
+      "img": "../img/Avatar (1).png"
+    },
+    {
+      "id": "1744197530197",
+      "name": "",
+      "gender": "",
+      "Company": "IUH",
+      "order_value": 123124,
+      "status": "inactive",
+      "date": "2222-02-12",
+      "img": "../img/Avatar (1).png"
+    }
+  ],
+  "Profit": [
+    {
+      "id": "1",
+      "month": 1,
+      "year": 2024,
+      "total_profit": 10000
+    },
+    {
+      "id": "2",
+      "month": 2,
+      "year": 2024,
+      "total_profit": 12000
+    },
+    {
+      "id": "3",
+      "month": 3,
+      "year": 2024,
+      "total_profit": 15000
+    },
+    {
+      "id": "4",
+      "month": 4,
+      "year": 2024,
+      "total_profit": 17000
+    },
+    {
+      "id": "5",
+      "month": 5,
+      "year": 2024,
+      "total_profit": 9000
+    },
+    {
+      "id": "6",
+      "month": 6,
+      "year": 2024,
+      "total_profit": 11000
+    },
+    {
+      "id": "7",
+      "month": 7,
+      "year": 2024,
+      "total_profit": 12500
+    },
+    {
+      "id": "8",
+      "month": 8,
+      "year": 2024,
+      "total_profit": 9800
+    },
+    {
+      "id": "9",
+      "month": 9,
+      "year": 2024,
+      "total_profit": 13000
+    },
+    {
+      "id": "10",
+      "month": 10,
+      "year": 2024,
+      "total_profit": 14000
+    },
+    {
+      "id": "11",
+      "month": 11,
+      "year": 2024,
+      "total_profit": 16000
+    },
+    {
+      "id": "12",
+      "month": 12,
+      "year": 2024,
+      "total_profit": 19000
+    }
+  ],
+  "order": [
+    {
+      "id": "1",
+      "price": 100,
+      "quantity": 2,
+      "month": 1,
+      "year": 2024
+    },
+    {
+      "id": "2",
+      "price": 200,
+      "quantity": 1,
+      "month": 1,
+      "year": 2024
+    },
+    {
+      "id": "3",
+      "price": 150,
+      "quantity": 3,
+      "month": 2,
+      "year": 2024
+    },
+    {
+      "id": "4",
+      "price": 180,
+      "quantity": 2,
+      "month": 2,
+      "year": 2024
+    },
+    {
+      "id": "5",
+      "price": 300,
+      "quantity": 1,
+      "month": 3,
+      "year": 2024
+    },
+    {
+      "id": "6",
+      "price": 220,
+      "quantity": 4,
+      "month": 3,
+      "year": 2024
+    },
+    {
+      "id": "7",
+      "price": 140,
+      "quantity": 2,
+      "month": 4,
+      "year": 2024
+    },
+    {
+      "id": "8",
+      "price": 210,
+      "quantity": 2,
+      "month": 4,
+      "year": 2024
+    },
+    {
+      "id": "9",
+      "price": 110,
+      "quantity": 1,
+      "month": 5,
+      "year": 2024
+    },
+    {
+      "id": "10",
+      "price": 160,
+      "quantity": 3,
+      "month": 5,
+      "year": 2024
+    },
+    {
+      "id": "11",
+      "price": 130,
+      "quantity": 2,
+      "month": 6,
+      "year": 2024
+    },
+    {
+      "id": "12",
+      "price": 170,
+      "quantity": 2,
+      "month": 6,
+      "year": 2024
+    },
+    {
+      "id": "13",
+      "price": 250,
+      "quantity": 1,
+      "month": 7,
+      "year": 2024
+    },
+    {
+      "id": "14",
+      "price": 190,
+      "quantity": 2,
+      "month": 7,
+      "year": 2024
+    },
+    {
+      "id": "15",
+      "price": 300,
+      "quantity": 3,
+      "month": 8,
+      "year": 2024
+    },
+    {
+      "id": "16",
+      "price": 140,
+      "quantity": 2,
+      "month": 8,
+      "year": 2024
+    },
+    {
+      "id": "17",
+      "price": 160,
+      "quantity": 1,
+      "month": 9,
+      "year": 2024
+    },
+    {
+      "id": "18",
+      "price": 230,
+      "quantity": 3,
+      "month": 9,
+      "year": 2024
+    },
+    {
+      "id": "19",
+      "price": 190,
+      "quantity": 2,
+      "month": 10,
+      "year": 2024
+    },
+    {
+      "id": "20",
+      "price": 210,
+      "quantity": 2,
+      "month": 10,
+      "year": 2024
+    },
+    {
+      "id": "21",
+      "price": 280,
+      "quantity": 1,
+      "month": 11,
+      "year": 2024
+    },
+    {
+      "id": "22",
+      "price": 200,
+      "quantity": 2,
+      "month": 11,
+      "year": 2024
+    },
+    {
+      "id": "23",
+      "price": 170,
+      "quantity": 2,
+      "month": 12,
+      "year": 2024
+    },
+    {
+      "id": "24",
+      "price": 220,
+      "quantity": 1,
+      "month": 12,
+      "year": 2024
+    },
+    {
+      "id": "25",
+      "price": 130,
+      "quantity": 2,
+      "month": 1,
+      "year": 2024
+    },
+    {
+      "id": "26",
+      "price": 190,
+      "quantity": 2,
+      "month": 2,
+      "year": 2024
+    },
+    {
+      "id": "27",
+      "price": 210,
+      "quantity": 1,
+      "month": 3,
+      "year": 2024
+    },
+    {
+      "id": "28",
+      "price": 175,
+      "quantity": 2,
+      "month": 4,
+      "year": 2024
+    },
+    {
+      "id": "29",
+      "price": 195,
+      "quantity": 3,
+      "month": 5,
+      "year": 2024
+    },
+    {
+      "id": "30",
+      "price": 250,
+      "quantity": 1,
+      "month": 6,
+      "year": 2024
+    }
+  ]
+}

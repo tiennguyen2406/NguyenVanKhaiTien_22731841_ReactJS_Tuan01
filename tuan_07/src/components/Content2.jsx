@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ModalAdd from './ModalAdd';
+import ModalUpdate from './ModalUpdate';
 import '../App.css';
 
 const statusColors = {
   new: "bg-blue-100 text-blue-600",
   "in-progress": "bg-yellow-100 text-yellow-600",
   completed: "bg-green-100 text-green-600",
+  active: "bg-green-100 text-green-600",
+  inactive: "bg-red-100 text-red-600",
 };
 
 function Content2() {
@@ -23,6 +27,7 @@ function Content2() {
     date: '',
     img: '../img/Avatar (1).png'
   });
+
   const usersPerPage = 5;
 
   useEffect(() => {
@@ -117,28 +122,21 @@ function Content2() {
           </div>
         </div>
 
-        {/* Modal thêm user */}
-        {showAddModal && (
-          <div className="modal-overlay1">
-            <div className="modal-box1">
-              <h2>Thêm người dùng</h2>
-              <input type="text" name="name" placeholder="Tên" value={newUser.name} onChange={handleNewUserChange} />
-              <input type="text" name="Company" placeholder="Công ty" value={newUser.Company} onChange={handleNewUserChange} />
-              <input type="number" name="order_value" placeholder="Giá trị đơn hàng" value={newUser.order_value} onChange={handleNewUserChange} />
-              <input type="date" name="date" value={newUser.date} onChange={handleNewUserChange} />
-              <select name="status" value={newUser.status} onChange={handleNewUserChange}>
-                <option value="">Chọn trạng thái</option>
-                <option value="new">New</option>
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
-              </select>
-              <div className="modal-actions1">
-                <button onClick={() => setShowAddModal(false)}>Hủy</button>
-                <button onClick={handleAddUser}>Lưu</button>
-              </div>
-            </div>
-          </div>
-        )}
+        <ModalAdd
+          show={showAddModal}
+          onClose={() => setShowAddModal(false)}
+          onChange={handleNewUserChange}
+          onSave={handleAddUser}
+          userData={newUser}
+        />
+
+        <ModalUpdate
+          show={isOpen}
+          onClose={onClose}
+          onChange={handleChange}
+          onSave={handleSave}
+          userData={formData}
+        />
 
         <div className="p-6">
           <div className="bg-white shadow rounded-lg overflow-x-auto">
@@ -206,30 +204,6 @@ function Content2() {
             </div>
           </div>
         </div>
-
-        {isOpen && formData.name !== undefined && (
-          <div className="modal-overlay">
-            <div className="modal-content">
-              <h2>Chỉnh sửa người dùng</h2>
-              <p className="modal-field">
-                Name:
-                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" />
-              </p>
-              <p className="modal-field">
-                Company:
-                <input type="text" name="Company" value={formData.Company} onChange={handleChange} placeholder="Company" />
-              </p>
-              <p className="modal-field">
-                Status:
-                <input type="text" name="status" value={formData.status} onChange={handleChange} placeholder="Status" />
-              </p>
-              <div className="modal-buttons">
-                <button onClick={onClose}>Hủy</button>
-                <button onClick={handleSave}>Lưu</button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </>
   );
