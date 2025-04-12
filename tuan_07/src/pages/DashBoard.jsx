@@ -5,7 +5,7 @@ function DashBoard() {
     return (
         <div>
             <Overview></Overview>
-            {/* <Outlet />   */}
+            <Outlet />  
         </div>
     );
 }
