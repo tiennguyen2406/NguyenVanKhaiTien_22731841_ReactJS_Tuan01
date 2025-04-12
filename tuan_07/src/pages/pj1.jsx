@@ -1,4 +1,4 @@
-function pj1() {
+function Pj1() {
   return (
     <div style={{color: "black"}}>
       <h1>Project Page</h1>
@@ -8,4 +8,4 @@ function pj1() {
     </div>
   );
 }
-export default pj1;
+export default Pj1;

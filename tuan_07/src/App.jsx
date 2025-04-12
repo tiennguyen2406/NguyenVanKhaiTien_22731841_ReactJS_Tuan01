@@ -1,43 +1,45 @@
-import './App.css'
+import './App.css';
 import Header from './components/Header';
 import Menu from './components/Menu';
-import Overview from './components/Overview';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import DashBoard from './pages/DashBoard';
 import Analytics from './pages/Analytics';
 import Tearms from './pages/Tearms';
 import Intergration from './pages/Intergration';
 import Mesage from './pages/Mesage';
-import pj1 from './pages/pj1';
+import Pj1 from './pages/Pj1';
+import OrderDetail from './components/OrderDetail';
+import ProfitDetail from './components/ProfitDetail';
+import UserDetail from './components/UserDetail';
 
 function App() {
-
   return (
-    <>
-      <div className="container1">
-        <div className="header">
-          <Header></Header>
-        </div>
-        <div className="menu">
-          <Menu></Menu>
-        </div>
-        <div className="navbar">
-          <Overview></Overview>
-        </div>
-        <div className="content">
-          {/* <Routes>
-            <Route path="/" element={<DashBoard />} />
-            <Route path="/Analytics" element={<Analytics />} />
-            <Route path="/Intergration" element={<Intergration />} />
-            <Route path="/Mesage" element={<Mesage />} />
-            <Route path="/pj1" element={<pj1 />} />
-            <Route path="/Tearms" element={<Tearms />} />
-          </Routes> */}
-        </div>
-        <div className="footer"></div>
+    <div className="container1">
+      <div className="header">
+        <Header />
       </div>
-    </>
-  )
+      <div className="menu">
+        <Menu />
+      </div>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<DashBoard />}>
+            <Route index element={<UserDetail />} />
+            <Route path="UserDetail" element={<UserDetail />} />
+            <Route path="OrderDetail" element={<OrderDetail />} />
+            <Route path="ProfitDetail" element={<ProfitDetail />} />
+          </Route>
+
+          <Route path="/Analytics" element={<Analytics />} />
+          <Route path="/Intergration" element={<Intergration />} />
+          <Route path="/Mesage" element={<Mesage />} />
+          <Route path="/Pj1" element={<Pj1 />} />
+          <Route path="/Tearms" element={<Tearms />} />
+        </Routes>
+      </div>
+  
+    </div>
+  );
 }
 
-export default App
+export default App;

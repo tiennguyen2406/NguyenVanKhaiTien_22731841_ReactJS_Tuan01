@@ -3,16 +3,15 @@
   display: grid;
   grid-template-areas:
     "menu header"
-    "menu navbar"
     "menu content"
-    "menu footer";
+    "menu content"
+    "menu content";
   grid-template-columns: 2fr 7fr;
   grid-template-rows: 1fr 2fr 5fr 1fr;
   width: 100vw;
   height: 100vh;
 }
 .container1 > div {
-  border: 1px solid black;
   background-color: white;
 }
 .container1 > div.header {

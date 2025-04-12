@@ -1,9 +1,11 @@
-import Content2 from "../components/Content2";
-
-function DashBoard(){
+import Overview from "../components/Overview";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+function DashBoard() {
     return (
         <div>
-            <Content2></Content2>
+            <Overview></Overview>
+            {/* <Outlet />   */}
         </div>
     );
 }

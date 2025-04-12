@@ -320,6 +320,17 @@
       "date": "2222-02-12",
       "img": "../img/Avatar (1).png"
     }
+    ,
+    {
+      "id": "121",
+      "img": "../img/Avatar (1).png",
+      "name": "Joadn",
+      "gender": "Male",
+      "Company": "ABC",
+      "order_value": 10001,
+      "status": "new",
+      "date": "2024-04-01"
+    }
   ],
   "Profit": [
     {
