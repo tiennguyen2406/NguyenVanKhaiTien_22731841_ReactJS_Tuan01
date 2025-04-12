@@ -1,6 +1,7 @@
 @import "tailwindcss";
 .container1 {
   display: grid;
+  
   grid-template-areas:
     "menu header"
     "menu content"
