@@ -18,6 +18,7 @@ const ProductList = () => {
     const [products, setProducts] = useState(sampleProducts);
     const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', stock: '' });
     const [searchQuery, setSearchQuery] = useState('');
+    const [categoryFilter, setCategoryFilter] = useState('');
     const [showModal, setShowModal] = useState(false);
 
     const handleInputChange = (e) => {
@@ -47,13 +48,19 @@ const ProductList = () => {
         setProducts(products.filter((product) => product.id !== id));
     };
 
-    const filteredProducts = products.filter((product) =>
-        product.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    const filteredProducts = products
+        .filter((product) =>
+            product.name.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+        .filter((product) => 
+            categoryFilter === '' || product.category === categoryFilter
+        );
 
     return (
         <div className="product-container">
             <h2 className="product-title">Danh sách sản phẩm</h2>
+
+            {/* Search Input */}
             <input
                 type="text"
                 placeholder="Tìm kiếm sản phẩm theo tên"
@@ -61,8 +68,21 @@ const ProductList = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
             />
+
+            {/* Category Dropdown */}
+            <select
+                className="category-filter"
+                value={categoryFilter}
+                onChange={(e) => setCategoryFilter(e.target.value)}
+            >
+                <option value="">Tất cả danh mục</option>
+                <option value="Thời trang">Thời trang</option>
+                <option value="Công nghệ">Công nghệ</option>
+                <option value="Gia dụng">Gia dụng</option>
+            </select>
+
             <button className="add-product-button" onClick={() => setShowModal(true)}>Thêm sản phẩm</button>
-            
+
             <div className="table-wrapper">
                 <table className="product-table">
                     <thead>
