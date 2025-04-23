@@ -25,12 +25,18 @@ const ProductList = () => {
     };
 
     const handleAddProduct = () => {
+        if (!newProduct.name || !newProduct.price || !newProduct.category || !newProduct.stock) {
+            alert('Vui lòng điền đầy đủ thông tin!');
+            return;
+        }
+
         const product = {
             id: Date.now(),
             ...newProduct,
             price: parseInt(newProduct.price),
             stock: parseInt(newProduct.stock),
         };
+
         setProducts([...products, product]);
         setNewProduct({ name: '', price: '', category: '', stock: '' });
         setShowModal(false);
