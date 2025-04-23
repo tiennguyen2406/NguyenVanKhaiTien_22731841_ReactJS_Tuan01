@@ -17,6 +17,7 @@ const sampleProducts = [
 const ProductList = () => {
     const [products, setProducts] = useState(sampleProducts);
     const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', stock: '' });
+    const [searchQuery, setSearchQuery] = useState('');
     const [showModal, setShowModal] = useState(false);
 
     const handleInputChange = (e) => {
@@ -46,9 +47,20 @@ const ProductList = () => {
         setProducts(products.filter((product) => product.id !== id));
     };
 
+    const filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <div className="product-container">
             <h2 className="product-title">Danh sách sản phẩm</h2>
+            <input
+                type="text"
+                placeholder="Tìm kiếm sản phẩm theo tên"
+                className="search-input"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+            />
             <button className="add-product-button" onClick={() => setShowModal(true)}>Thêm sản phẩm</button>
             
             <div className="table-wrapper">
@@ -63,7 +75,7 @@ const ProductList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {products.map((product) => (
+                        {filteredProducts.map((product) => (
                             <tr key={product.id}>
                                 <td>{product.name}</td>
                                 <td>{product.price.toLocaleString()}đ</td>
