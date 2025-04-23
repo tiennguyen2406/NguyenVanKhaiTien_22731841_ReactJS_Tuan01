@@ -56,6 +56,10 @@ const ProductList = () => {
             categoryFilter === '' || product.category === categoryFilter
         );
 
+    // Tính tổng số sản phẩm và tổng tồn kho
+    const totalProducts = filteredProducts.length;
+    const totalStock = filteredProducts.reduce((acc, product) => acc + product.stock, 0);
+
     return (
         <div className="product-container">
             <h2 className="product-title">Danh sách sản phẩm</h2>
@@ -80,6 +84,11 @@ const ProductList = () => {
                 <option value="Công nghệ">Công nghệ</option>
                 <option value="Gia dụng">Gia dụng</option>
             </select>
+
+            {/* Tổng số sản phẩm và tổng tồn kho */}
+            <div className="summary-info">
+                <p>Tổng sản phẩm: {totalProducts} | Tổng tồn kho: {totalStock}</p>
+            </div>
 
             <button className="add-product-button" onClick={() => setShowModal(true)}>Thêm sản phẩm</button>
 
