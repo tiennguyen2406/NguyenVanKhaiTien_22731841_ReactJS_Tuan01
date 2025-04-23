@@ -1,0 +1,20 @@
+/* Căn giữa toàn bộ nội dung */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Giao diện container chính */
+.container {
+  width: 100vw;
+  padding: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
