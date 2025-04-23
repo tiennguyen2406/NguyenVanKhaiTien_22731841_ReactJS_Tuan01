@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../ProductList.css';
 
-const sampleProducts = [
-    { id: 1, name: 'Áo thun nam', price: 150000, category: 'Thời trang', stock: 20 },
-    { id: 2, name: 'Laptop Dell XPS', price: 32000000, category: 'Công nghệ', stock: 5 },
-    { id: 3, name: 'Máy hút bụi Electrolux', price: 2200000, category: 'Gia dụng', stock: 8 },
-    { id: 4, name: 'Giày sneaker nữ', price: 750000, category: 'Thời trang', stock: 15 },
-    { id: 5, name: 'Smartphone Samsung A54', price: 7800000, category: 'Công nghệ', stock: 12 },
-    { id: 6, name: 'Bàn ủi hơi nước', price: 540000, category: 'Gia dụng', stock: 9 },
-    { id: 7, name: 'Quần jeans nam', price: 450000, category: 'Thời trang', stock: 25 },
-    { id: 8, name: 'Tai nghe Bluetooth Sony', price: 1450000, category: 'Công nghệ', stock: 10 },
-    { id: 9, name: 'Nồi chiên không dầu', price: 1800000, category: 'Gia dụng', stock: 6 },
-    { id: 10, name: 'Áo khoác nữ', price: 650000, category: 'Thời trang', stock: 18 },
-];
-
 const ProductList = () => {
-    const [products, setProducts] = useState(sampleProducts);
+    // Tải danh sách sản phẩm từ localStorage nếu có, nếu không dùng sampleProducts
+    const savedProducts = JSON.parse(localStorage.getItem('products')) || [
+        { id: 1, name: 'Áo thun nam', price: 150000, category: 'Thời trang', stock: 20 },
+        { id: 2, name: 'Laptop Dell XPS', price: 32000000, category: 'Công nghệ', stock: 5 },
+        { id: 3, name: 'Máy hút bụi Electrolux', price: 2200000, category: 'Gia dụng', stock: 8 },
+        { id: 4, name: 'Giày sneaker nữ', price: 750000, category: 'Thời trang', stock: 15 },
+        { id: 5, name: 'Smartphone Samsung A54', price: 7800000, category: 'Công nghệ', stock: 12 },
+        { id: 6, name: 'Bàn ủi hơi nước', price: 540000, category: 'Gia dụng', stock: 9 },
+        { id: 7, name: 'Quần jeans nam', price: 450000, category: 'Thời trang', stock: 25 },
+        { id: 8, name: 'Tai nghe Bluetooth Sony', price: 1450000, category: 'Công nghệ', stock: 10 },
+        { id: 9, name: 'Nồi chiên không dầu', price: 1800000, category: 'Gia dụng', stock: 6 },
+        { id: 10, name: 'Áo khoác nữ', price: 650000, category: 'Thời trang', stock: 18 },
+    ];
+
+    const [products, setProducts] = useState(savedProducts);
     const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', stock: '' });
     const [searchQuery, setSearchQuery] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('');
     const [showModal, setShowModal] = useState(false);
+
+    // Lưu sản phẩm vào localStorage mỗi khi danh sách thay đổi
+    useEffect(() => {
+        localStorage.setItem('products', JSON.stringify(products));
+    }, [products]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
