@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import ProductItem from './ProductItem';  // Import component ProductItem
 import '../ProductList.css';
 
 const ProductList = () => {
-    // Tải danh sách sản phẩm từ localStorage nếu có, nếu không dùng sampleProducts
     const savedProducts = JSON.parse(localStorage.getItem('products')) || [
         { id: 1, name: 'Áo thun nam', price: 150000, category: 'Thời trang', stock: 20 },
         { id: 2, name: 'Laptop Dell XPS', price: 32000000, category: 'Công nghệ', stock: 5 },
@@ -22,7 +22,6 @@ const ProductList = () => {
     const [categoryFilter, setCategoryFilter] = useState('');
     const [showModal, setShowModal] = useState(false);
 
-    // Lưu sản phẩm vào localStorage mỗi khi danh sách thay đổi
     useEffect(() => {
         localStorage.setItem('products', JSON.stringify(products));
     }, [products]);
@@ -62,7 +61,6 @@ const ProductList = () => {
             categoryFilter === '' || product.category === categoryFilter
         );
 
-    // Tính tổng số sản phẩm và tổng tồn kho
     const totalProducts = filteredProducts.length;
     const totalStock = filteredProducts.reduce((acc, product) => acc + product.stock, 0);
 
@@ -111,17 +109,11 @@ const ProductList = () => {
                     </thead>
                     <tbody>
                         {filteredProducts.map((product) => (
-                            <tr key={product.id}>
-                                <td>{product.name}</td>
-                                <td>{product.price.toLocaleString()}đ</td>
-                                <td>{product.category}</td>
-                                <td>{product.stock}</td>
-                                <td>
-                                    <button className="delete-button" onClick={() => handleDeleteProduct(product.id)}>
-                                        Xoá
-                                    </button>
-                                </td>
-                            </tr>
+                            <ProductItem 
+                                key={product.id} 
+                                product={product} 
+                                onDelete={handleDeleteProduct} 
+                            />
                         ))}
                     </tbody>
                 </table>
