@@ -1,14 +1,12 @@
-import './App.css'
 import React from 'react';
 import ProductList from './components/ProductList';
-function App() {
-  
 
-  return (
-    <div className="container">
-      <ProductList />
-    </div>
-  )
-}
+const App = () => {
+    return (
+        <div className="container">
+            <ProductList></ProductList>
+        </div>
+    );
+};
 
-export default App
+export default App;

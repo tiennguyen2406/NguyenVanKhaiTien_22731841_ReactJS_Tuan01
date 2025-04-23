@@ -1,5 +1,5 @@
-import React from 'react';
-import '../ProductList.css'; // Nhớ import file CSS
+import React, { useState } from 'react';
+import '../ProductList.css';
 
 const sampleProducts = [
     { id: 1, name: 'Áo thun nam', price: 150000, category: 'Thời trang', stock: 20 },
@@ -15,9 +15,36 @@ const sampleProducts = [
 ];
 
 const ProductList = () => {
+    const [products, setProducts] = useState(sampleProducts);
+    const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '', stock: '' });
+    const [showModal, setShowModal] = useState(false);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setNewProduct({ ...newProduct, [name]: value });
+    };
+
+    const handleAddProduct = () => {
+        const product = {
+            id: Date.now(),
+            ...newProduct,
+            price: parseInt(newProduct.price),
+            stock: parseInt(newProduct.stock),
+        };
+        setProducts([...products, product]);
+        setNewProduct({ name: '', price: '', category: '', stock: '' });
+        setShowModal(false);
+    };
+
+    const handleDeleteProduct = (id) => {
+        setProducts(products.filter((product) => product.id !== id));
+    };
+
     return (
         <div className="product-container">
             <h2 className="product-title">Danh sách sản phẩm</h2>
+            <button className="add-product-button" onClick={() => setShowModal(true)}>Thêm sản phẩm</button>
+            
             <div className="table-wrapper">
                 <table className="product-table">
                     <thead>
@@ -30,20 +57,60 @@ const ProductList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {sampleProducts.map((product) => (
+                        {products.map((product) => (
                             <tr key={product.id}>
                                 <td>{product.name}</td>
                                 <td>{product.price.toLocaleString()}đ</td>
                                 <td>{product.category}</td>
                                 <td>{product.stock}</td>
                                 <td>
-                                    <button className="delete-button">Xoá</button>
+                                    <button className="delete-button" onClick={() => handleDeleteProduct(product.id)}>
+                                        Xoá
+                                    </button>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
+
+            {showModal && (
+                <div className="modal-overlay">
+                    <div className="modal-box">
+                        <h3>Thêm sản phẩm mới</h3>
+                        <input
+                            name="name"
+                            placeholder="Tên sản phẩm"
+                            value={newProduct.name}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            name="price"
+                            type="number"
+                            placeholder="Giá"
+                            value={newProduct.price}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            name="category"
+                            placeholder="Danh mục"
+                            value={newProduct.category}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            name="stock"
+                            type="number"
+                            placeholder="Tồn kho"
+                            value={newProduct.stock}
+                            onChange={handleInputChange}
+                        />
+                        <div className="modal-actions">
+                            <button onClick={handleAddProduct}>Thêm</button>
+                            <button onClick={() => setShowModal(false)} className="cancel-btn">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

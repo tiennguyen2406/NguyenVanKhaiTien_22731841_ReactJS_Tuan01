@@ -1,5 +1,6 @@
 .product-container {
-    max-width: 900px;
+    width: 100%;
+    max-width: 1200px; /* Đặt một max-width cho container không vượt quá màn hình */
     margin: 40px auto;
     padding: 20px;
     background: #fff;
@@ -15,12 +16,13 @@
 }
 
 .table-wrapper {
-    overflow-x: auto;
+    overflow-x: auto; /* Cho phép cuộn ngang khi bảng quá rộng */
 }
 
 .product-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: auto; /* Cho phép tự động điều chỉnh kích thước các cột */
 }
 
 .product-table th,
